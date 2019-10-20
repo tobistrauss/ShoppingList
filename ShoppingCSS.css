@@ -157,11 +157,11 @@ input[type="text"] {
   width: 311px;
   border: 1px solid #ccc;
   border-radius: 1.5em;
-  background: #fff;
+  background: transparent;
   resize: none;
-  outline: none;
-  
+  outline: none; 
 }
+
 input[type="text"][required]:focus {
   border-color: #4596ff;
 }
@@ -179,9 +179,11 @@ input[type="text"][required]:valid + label[placeholder]:before {
 
 input[type="text"][required]:invalid + label[placeholder][alt]:before {
   content: attr(alt);
+  font-family: fantasy;
 }
 
 input[type="text"][required] + label[placeholder] {
+  font-family: fantasy;
   position: fixed;
   left: 300px;
   top: 215px;
