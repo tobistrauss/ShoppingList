@@ -4,7 +4,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="ShoppingCSS.css">
+<script> //Script
+var itemid;
+var id;
+var optionListe;
+function welcheListe();
+</script> 
 </head>
+
 
 <body>
 
@@ -15,10 +22,12 @@
 </div>
 
 
+
 <form>
     <input required='' type='text'>
-    <label alt='Item hinzufügen' placeholder='Name des Items'></label>
+    <label alt='Item hinzufügen' placeholder='press Enter'></label>
 </form>
+
 
 
 
@@ -34,19 +43,19 @@
               "40">Liste hinzufügen</a></li>
 
             <div class="select">
-                <select>
-                  <option onclick="getlist()">Liste 1</option>
-                  <option>Liste 2</option>
-                  <option>Liste 3</option>
+                <select func="welcheListe">
+                  <option optionListe="Liste1">Liste 1</option>
+                  <option optionListe="Liste2">Liste 2</option>
+                  <option optionListe="Liste3">Liste 3</option>
                 </select>
               </div>
 
-            <li class="listItemA"><a href="#" onclick="additem()"><img alt="icon" height="40" src=
+            <li class="listItemA"><a href="#"><img alt="icon" height="40" src=
             "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\add.png" width=
             "40">Item hinzufügen</a></li>
 
 
-            <li class="listItemA"><a href="#" onclick="removeitem()"><img alt="icon" height="40" src=
+            <li class="listItemA"><a href="#"><img alt="icon" height="40" src=
             "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\delete.png" width=
             "40">Item löschen</a></li>
 

@@ -50,3 +50,25 @@ function removeitem() {
     xhttp.open("PUT", "https://shopping-lists-api.herokuapp.com/api/v1/lists/5d9c7b9ee2d16f00178a5c6b/items/ITEMID???", true);
     xhttp.send();
   }
+
+  
+var itemid;
+
+var id;
+
+var optionListe;
+
+welcheListe();
+
+function welcheListe() {
+  switch (optionListe) {
+    case "Liste1":
+      this.id = "5d9c7b9ee2d16f00178a5c6b";
+      break;
+    case "Liste2":
+      this.id = "5db00803655dfa001785c029";
+      break;
+    default:
+      this.id = "5db00809655dfa001785c02a";
+  }
+}
