@@ -57,7 +57,33 @@ var id;
 
 var optionListe;
 
+welcheListe();
 
+function welcheListe() {
+
+switch (optionListe) {
+
+  case "Liste1":
+
+    this.id = "5d9c7b9ee2d16f00178a5c6b";
+
+    break;
+
+  case "Liste2":
+
+    this.id = "5db00803655dfa001785c029";
+
+    break;
+
+  default:
+
+    this.id = "5db00809655dfa001785c02a";
+
+}
+
+}
+
+//switch case durch getElementById unnötig
 
 document.getElementById("listSelect").addEventListener('change', function(event) {
 console.log(event.target.value); // Get ID of list
