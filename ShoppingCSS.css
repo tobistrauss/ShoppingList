@@ -106,7 +106,7 @@ body {
 }
 
 
-.listItemA {
+.listItem {
   height: 40px;
   width: 240px;
   transition: .4s;
@@ -115,7 +115,7 @@ body {
   left: -40px;
 }
 
-.listItemA:hover {
+.listItem:hover {
   left: 0;
 }
 
@@ -221,6 +221,7 @@ input[type="text"][required] + label[placeholder]:before {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 
 

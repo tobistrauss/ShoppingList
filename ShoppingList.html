@@ -4,7 +4,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="ShoppingCSS.css">
-<script src="shoppingList.js"></script> 
 </head>
 
 
@@ -24,6 +23,8 @@
 </form>
 
 
+<div id="Items"></div> 
+
 
 
 <div class="sidebar">  
@@ -33,15 +34,17 @@
 
         <ul>
 
-            <li class="listItem"><a href="https://shopping-lists-api.herokuapp.com/"><img alt="icon" height="40" src=
+            <li class="listItem"><a href="https://shopping-lists-api.herokuapp.com/" target="_blank"><img alt="icon" height="40" src=
               "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\listehinzufügen.png" width=
               "40">Liste hinzufügen</a></li>
 
             <div class="select">
-                <select>
-                  <option>Liste 1</option>
-                  <option>Liste 2</option>
-                  <option>Liste 3</option>
+                <select id="listSelect"> 
+                  <option value="5d9c7b9ee2d16f00178a5c6b">Liste 1</option> 
+                  <option value="5db00803655dfa001785c029">Liste 2</option>
+                  <option value="5db00809655dfa001785c02a">Liste 3</option>
+                  <option value="5db2c148e3d42a0017c30a9c">Liste 4</option>
+                  "
                 </select>
               </div>
 
@@ -59,5 +62,6 @@
    
 </div>
 
-
+<script src="shoppingList.js"></script> <!--muss am Ende vom Skript stehen -->
 </body>
+</html>
