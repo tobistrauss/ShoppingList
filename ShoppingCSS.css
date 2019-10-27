@@ -63,7 +63,7 @@ body {
   padding: 0;
   width: 200px;
   background-color:#f1f1f1;
-  position: fixed;
+  position: absolute;
   height: 100%;
   overflow: auto;
   background: #333;
@@ -156,7 +156,7 @@ select option {
 
 input[type="text"] {
   box-sizing: border-box;    
-  position: fixed;
+  position: absolute;
   top: 121px;
   left: 321px;
   right: 50px;
@@ -196,7 +196,7 @@ input[type="text"][required]:invalid + label[placeholder][alt]:before {
 
 input[type="text"][required] + label[placeholder] {
   font-family: fantasy;
-  position: fixed;
+  position: absolute;
   left: 325px;
   top: 215px;
   font-size: x-large;
@@ -222,9 +222,279 @@ input[type="text"][required] + label[placeholder]:before {
   background-position: center;
 }
 
-#Items {
 
+@keyframes rightToLeftX {
+  0% {
+    background: linear-gradient(0deg, #4596ff 0%, transparent 0%)
+  }
+
+  5% {
+    background: linear-gradient(0deg, #4596ff 5%, transparent 5%)
+  }
+
+  10% {
+    background: linear-gradient(0deg, #4596ff 10%, transparent 10%)
+  }
+
+  15% {
+    background: linear-gradient(0deg, #4596ff 15%, transparent 15%)
+  }
+
+  20% {
+    background: linear-gradient(0deg, #4596ff 20%, transparent 20%)
+  }
+
+  25% {
+    background: linear-gradient(0deg, #4596ff 25%, transparent 25%)
+  }
+
+  30% {
+    background: linear-gradient(0deg, #4596ff 30%, transparent 30%)
+  }
+
+  35% {
+    background: linear-gradient(0deg, #4596ff 35%, transparent 35%)
+  }
+
+  40% {
+    background: linear-gradient(0deg, #4596ff 40%, transparent 40%)
+  }
+
+  45% {
+    background: linear-gradient(0deg, #4596ff 45%, transparent 45%)
+  }
+
+  50% {
+    background: linear-gradient(0deg, #4596ff 50%, transparent 50%)
+  }
+
+  55% {
+    background: linear-gradient(0deg, #4596ff 55%, transparent 55%)
+  }
+
+  60% {
+    background: linear-gradient(0deg, #4596ff 60%, transparent 60%)
+  }
+
+  65% {
+    background: linear-gradient(0deg, #4596ff 65%, transparent 65%)
+  }
+
+  70% {
+    background: linear-gradient(0deg, #4596ff 70%, transparent 70%)
+  }
+
+  75% {
+    background: linear-gradient(0deg, #4596ff 75%, transparent 75%)
+  }
+
+  80% {
+    background: linear-gradient(0deg, #4596ff 80%, transparent 80%)
+  }
+
+  85% {
+    background: linear-gradient(0deg, #4596ff 85%, transparent 85%)
+  }
+
+  90% {
+    background: linear-gradient(0deg, #4596ff 90%, transparent 90%)
+  }
+
+  95% {
+    background: linear-gradient(0deg, #4596ff 95%, transparent 95%)
+  }
+
+  100% {
+    background: linear-gradient(0deg, #4596ff 100%, transparent 100%)
+  }
 }
+
+@keyframes leftToRightX {
+  0% {
+    background: linear-gradient(180deg, #4596ff 0%, transparent 0%)
+  }
+
+  5% {
+    background: linear-gradient(180deg, #4596ff 5%, transparent 5%)
+  }
+
+  10% {
+    background: linear-gradient(180deg, #4596ff 10%, transparent 10%)
+  }
+
+  15% {
+    background: linear-gradient(180deg, #4596ff 15%, transparent 15%)
+  }
+
+  20% {
+    background: linear-gradient(180deg, #4596ff 20%, transparent 20%)
+  }
+
+  25% {
+    background: linear-gradient(180deg, #4596ff 25%, transparent 25%)
+  }
+
+  30% {
+    background: linear-gradient(180deg, #4596ff 30%, transparent 30%)
+  }
+
+  35% {
+    background: linear-gradient(180deg, #4596ff 35%, transparent 35%)
+  }
+
+  40% {
+    background: linear-gradient(180deg, #4596ff 40%, transparent 40%)
+  }
+
+  45% {
+    background: linear-gradient(180deg, #4596ff 45%, transparent 45%)
+  }
+
+  50% {
+    background: linear-gradient(180deg, #4596ff 50%, transparent 50%)
+  }
+
+  55% {
+    background: linear-gradient(180deg, #4596ff 55%, transparent 55%)
+  }
+
+  60% {
+    background: linear-gradient(180deg, #4596ff 60%, transparent 60%)
+  }
+
+  65% {
+    background: linear-gradient(180deg, #4596ff 65%, transparent 65%)
+  }
+
+  70% {
+    background: linear-gradient(180deg, #4596ff 70%, transparent 70%)
+  }
+
+  75% {
+    background: linear-gradient(180deg, #4596ff 75%, transparent 75%)
+  }
+
+  80% {
+    background: linear-gradient(180deg, #4596ff 80%, transparent 80%)
+  }
+
+  85% {
+    background: linear-gradient(180deg, #4596ff 85%, transparent 85%)
+  }
+
+  90% {
+    background: linear-gradient(180deg, #4596ff 90%, transparent 90%)
+  }
+
+  95% {
+    background: linear-gradient(180deg, #4596ff 95%, transparent 95%)
+  }
+
+  100% {
+    background: linear-gradient(180deg, #4596ff 100%, transparent 100%)
+  }
+}
+
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  min-height: 100vh;
+  margin: auto;
+  flex-direction: column;
+}
+
+
+h2 {
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+label {
+  flex-shrink: 0;
+  transition: all 200ms ease-in;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: 'Sacramento', cursive;
+  font-style: italic;
+  font-size: 2.25em;
+  font-weight: bold;
+}
+
+label:hover {
+  border-color: #f4f3ff;
+  background: transparent;
+}
+
+label.selected {
+  border-color: #d6d4f3;
+  background: #cc000057;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+
+
+label.selected .radio-ghost::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox-ghost {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: 3px solid #4596ff;
+  margin-right: 10px;
+  transition: all 200ms ease-in;
+}
+
+label.selected .checkbox-ghost::before {
+  animation: leftToRightX 100ms linear forwards;
+  transform: rotate(-45deg);
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  border-radius: 4px;
+  height: 15px;
+  margin-left: 6px;
+}
+
+label.selected .checkbox-ghost::after {
+  animation: rightToLeftX 100ms linear forwards;
+  animation-delay: 100ms;
+  transform: rotate(45deg);
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  border-radius: 4px;
+  height: 15px;
+  margin-left: 6px;
+}
+
 
 
 

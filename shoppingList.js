@@ -89,3 +89,17 @@ document.getElementById("listSelect").addEventListener('change', function(event)
 console.log(event.target.value); // Get ID of list
 getlist(event.target.value);
 })
+
+
+
+
+  document.addEventListener('change', function (e) {
+
+    if (e.target.name === 'checkItems') {
+      if (e.target.checked) {
+        e.target.parentNode.className = 'selected';
+      } else {
+        e.target.parentNode.className = '';
+      }
+    }
+  });
