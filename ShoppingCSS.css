@@ -356,7 +356,9 @@
  label.selected {
      border-color: #ffffff;
      text-decoration: line-through;
-     animation: durchstreichen 4s linear;
+     text-decoration-color: #4596ff;
+     text-decoration-style: double;
+     animation: durchstreichen 2.5s linear;
 }
 @keyframes durchstreichen {
   from { text-decoration-color: transparent; }
