@@ -410,3 +410,31 @@
      height: 15px;
      margin-left: 6px;
 }
+/* HOVER COLOR */
+
+a svg:hover #facebook,
+a svg:hover #instagram { 
+  fill: #111;
+}
+
+/* GENERAL STYLES */
+
+
+article { 
+  width: 100%; 
+  margin: 60px auto; 
+  text-align: center;
+  zoom: 2;
+}
+a { 
+  outline: none; 
+  border: 0; 
+  text-decoration: none; 
+}
+a svg #facebook,
+a svg #instagram { 
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
