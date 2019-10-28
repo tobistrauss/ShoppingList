@@ -194,6 +194,7 @@
      background-repeat: no-repeat;
      background-position: center;
 }
+
  @keyframes rightToLeftX {
      0% {
          background: linear-gradient(0deg, #4596ff 0%, transparent 0%) 
@@ -325,13 +326,11 @@
     }
 }
  form {
-     display: flex;
-     align-items: center;
      justify-content: center;
-     width: 250px;
-     min-height: 100vh;
+     width: 600px;
      margin: auto;
      flex-direction: column;
+     padding-top: 155px;
 }
  h2 {
      flex-shrink: 0;
