@@ -172,7 +172,7 @@
  input[type="text"][required] + label[placeholder] {
      font-family: fantasy;
      position: absolute;
-     left: 325px;
+     left: 320px;
      top: 215px;
      font-size: x-large;
      display: block;
@@ -332,10 +332,6 @@
      flex-direction: column;
      padding-top: 155px;
 }
- h2 {
-     flex-shrink: 0;
-     font-weight: 500;
-}
  label {
      flex-shrink: 0;
      transition: all 200ms ease-in;
@@ -354,13 +350,19 @@
      font-size: 2.25em;
 }
  label:hover {
-     border-color: #f4f3ff;
+     border-color: #ffffff;
      background: transparent;
 }
  label.selected {
-     border-color: #d6d4f3;
-     background: #cc000057;
+     border-color: #ffffff;
+     text-decoration: line-through;
+     animation: durchstreichen 4s linear;
 }
+@keyframes durchstreichen {
+  from { text-decoration-color: transparent; }
+  to { text-decoration-color: auto; }
+}
+
  input[type='radio'], input[type='checkbox'] {
      position: absolute;
      opacity: 0;
