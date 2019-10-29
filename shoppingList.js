@@ -1,3 +1,4 @@
+
 //gibt Liste zurück
 function getlist(id) {
   var xhttp = new XMLHttpRequest();
@@ -20,7 +21,7 @@ function additem() {
       this.responseText;
     }
   };
-  xhttp.open("POST", "https://shopping-lists-api.herokuapp.com/api/v1/lists/5d9c7b9ee2d16f00178a5c6b/items", true);
+  xhttp.open("POST", "https://shopping-lists-api.herokuapp.com/api/v1/lists/"+id+"/items", true);
   xhttp.send();
 }
 
@@ -33,7 +34,7 @@ function removeitem() {
       this.responseText;
     }
   };
-  xhttp.open("DELETE", "https://shopping-lists-api.herokuapp.com/api/v1/lists/5d9c7b9ee2d16f00178a5c6b/items/ITEMID???", true);
+  xhttp.open("DELETE", "https://shopping-lists-api.herokuapp.com/api/v1/lists/"+id+"/items/ITEMID???", true);
   xhttp.send();
 }
 
@@ -46,44 +47,11 @@ function updateitem() {
       this.responseText;
     }
   };
-  xhttp.open("PUT", "https://shopping-lists-api.herokuapp.com/api/v1/lists/5d9c7b9ee2d16f00178a5c6b/items/ITEMID???", true);
+  xhttp.open("PUT", "https://shopping-lists-api.herokuapp.com/api/v1/lists/"+id+"/items/ITEMID???", true);
   xhttp.send();
 }
 
 
-var itemid;
-
-var id;
-
-var optionListe;
-
-welcheListe();
-
-function welcheListe() {
-
-switch (optionListe) {
-
-  case "Liste1":
-
-    this.id = "5d9c7b9ee2d16f00178a5c6b";
-
-    break;
-
-  case "Liste2":
-
-    this.id = "5db00803655dfa001785c029";
-
-    break;
-
-  default:
-
-    this.id = "5db00809655dfa001785c02a";
-
-}
-
-}
-
-//switch case durch getElementById unnötig
 
 document.getElementById("listSelect").addEventListener('change', function(event) {
 console.log(event.target.value); // Get ID of list
@@ -91,9 +59,8 @@ getlist(event.target.value);
 })
 
 
-
-
-  document.addEventListener('change', function (e) {
+//Checkbox
+document.addEventListener('change', function (e) {
 
     if (e.target.name === 'checkItems') {
       if (e.target.checked) {
@@ -102,4 +69,22 @@ getlist(event.target.value);
         e.target.parentNode.className = '';
       }
     }
-  });
+});
+
+
+// Get the input field
+var input = document.getElementById("myInput");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+});
+
+
+

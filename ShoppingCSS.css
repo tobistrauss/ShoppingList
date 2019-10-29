@@ -194,6 +194,10 @@
      background-position: center;
 }
 
+.myBtn{
+    display: none;
+}
+
  @keyframes rightToLeftX {
      0% {
          background: linear-gradient(0deg, #4596ff 0%, transparent 0%) 
@@ -356,7 +360,7 @@
      text-decoration: line-through;
      text-decoration-color: #4596ff;
      text-decoration-style: double;
-     animation: durchstreichen 2.5s linear;
+     animation: durchstreichen 2s linear;
 }
 @keyframes durchstreichen {
   from { text-decoration-color: transparent; }

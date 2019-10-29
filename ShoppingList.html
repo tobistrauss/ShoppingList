@@ -80,10 +80,9 @@
 </div>
 
 
-<form id="inputfield"> 
-    <input required="" type="text" onsubmit="additem()">
+<form> 
+    <input required="" type="text" id="myInput">
     <label alt="Add Item" placeholder="Press Enter"></label>
-
     <label>
         <input name="checkItems" type="checkbox" />
         <span class="checkbox-ghost"></span>
@@ -103,14 +102,16 @@
       </label>
 </form>
 
+<button id="myBtn" onclick="additem(input)">Button unsichtbar lol</button>
+
 <div id="Items"></div>
 
 
-<!-- Werbung LOL-->
+<!-- Werbung LOL
 <script>
     window.alert("Milfs in deiner Gegend!!!");
 </script>
-
+-->
 
 
 
