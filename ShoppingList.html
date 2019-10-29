@@ -40,7 +40,7 @@
                 </select>
             </div>
 
-            <li class="listItem"><a href="#"><img alt="icon" height="40" src=
+            <li class="listItem"><a href="ShoppingList.html#inputfield"><img alt="icon" height="40" src=
             "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\add.png" width=
             "40">Item hinzufügen</a></li>
 
@@ -80,10 +80,9 @@
 </div>
 
 
-<form> 
-    <input required="" type="text">
-    
-    <label alt="Add Item" placeholder="Press Enter"><script>additem()</script></label>
+<form id="inputfield"> 
+    <input required="" type="text" onsubmit="additem()">
+    <label alt="Add Item" placeholder="Press Enter"></label>
 
     <label>
         <input name="checkItems" type="checkbox" />
