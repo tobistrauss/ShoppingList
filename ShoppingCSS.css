@@ -90,7 +90,7 @@
      margin-left: auto;
      vertical-align: middle;
      margin-top: -2px;
-     margin-right: 19px;
+     margin-right: 20px;
 }
  .sidebar ul {
      line-height: 40px;
@@ -149,10 +149,8 @@
      resize: none;
      outline: none;
      text-align:center;
-     font-family: 'Sacramento', cursive;
-     font-style: italic;
+     font-family: fantasy;
      font-size: 3em;
-     font-weight: bold;
 }
  input[type="text"][required]:focus {
      border-color: #4596ff;
@@ -344,10 +342,8 @@
      border-radius: 8px;
      border: 1px solid transparent;
      margin-bottom: 5px;
-     font-weight: 500;
-     font-family: 'Sacramento', cursive;
-     font-style: italic;
-     font-size: 2.25em;
+     font-family: fantasy;
+     font-size: 2em;
 }
  label:hover {
      border-color: #ffffff;
