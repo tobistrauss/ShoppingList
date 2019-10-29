@@ -4,8 +4,10 @@
 }
  body {
      margin: 0;
+     overflow: hidden;
      font-family: Arial, Helvetica, sans-serif;
      background-image: url(paperbackground.png) 
+
 }
  .topnav {
      overflow: hidden;
