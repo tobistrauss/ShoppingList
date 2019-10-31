@@ -16,6 +16,7 @@
      text-align: center;
      font-weight: bold;
 }
+
  .topnav a {
      float: left;
      display: block;
@@ -57,10 +58,9 @@
     }
 }
 
+
 /*SIDEBAR*/
  .sidebar {
-     margin: 0;
-     padding: 0;
      width: 200px;
      background-color:#f1f1f1;
      position: absolute;
@@ -72,9 +72,8 @@
 }
  @media screen and (max-width: 600px) {
      .sidebar {
-         width: 100%;
-         height: auto;
-         position: relative;
+         width: auto;
+         height: 100%
     }
      .sidebar a {
         float: left;
@@ -82,6 +81,9 @@
      .content {
         margin-left: 0;
     }
+}
+@media screen and (max-width: 600px){
+    .getItemBox {position: middle}
 }
 /*SIDEBAR*/
  .sidebar a {
@@ -127,6 +129,7 @@
      -webkit-appearance: none;
      appearance: none;
      border: none;
+     overflow: hidden;
 }
  select::-ms-expand {
      display: none;
@@ -441,4 +444,69 @@ a svg #instagram {
   transition-timing-function: ease-in-out;
   -webkit-transition: 200ms;
   -webkit-transition-timing-function: ease-in-out;
+}
+
+.Items{
+
+flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-family: fantasy;
+    color: #333;
+    font-size: 2em
+}
+/*
+@media only screen and (min-width:800){
+    .addText { display: block; }
+    .addIcon { display: none; }
+  }
+  @media only screen and (max-width:799){
+    .addText { display: none; }
+    .addIcon { display: block; }
+  }
+  @media only screen and (min-width: 800px){
+      .deleteText {display:block;}
+      .deleteIcon {display: none;}
+  }
+  @media only screen and (max-width: 799){
+    .deleteText {display:none;}
+    .deleteIcon {display: block;}
+}
+@media only screen and (min-width: 800px){
+    .listeHinzufügenText {display: block;}
+    .listeHinzufügenIcon {display: none;}
+}
+@media only screen and (max-width: 799px){
+    .listeHinzufügenText {display: none;}
+    .listeHinzufügenIcon {display: block;}
+}
+*/
+@media only screen and (max-width:1000px){
+    .checkbox-ghost {float:right;}
+}
+@media only screen and (max-width: 1000px){
+    .select {overflow: hidden;}
+    .select{width:50%}
+}
+@media only screen and (min-width: 1000px){
+    .selectMobile{display: none;}
+    .select{display: block;}
+}
+@media only screen and (min-width: 1000px){
+    #myBtn{display: block;}
+}
+@media only screen and (max-width: 999px){
+    #myBtn{display: none;}
+}
+@media only screen and (max-width: 999px){
+    #myInput{display: none;}
+}
+@media only screen and (max-width: 999px){
+    .placeholder{display:none;}
 }

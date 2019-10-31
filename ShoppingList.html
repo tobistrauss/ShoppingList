@@ -12,8 +12,18 @@
 <div class="topnav" id="myTopnav">
  
   <a href="https://de.wikipedia.org/wiki/Einkaufszettel">Shopping Liste</a>
+  <!--
+  <div class="selectMobile">
+      <select id="listSelect"> 
+        <option value="meineListen">Meine Listen</option>
+        <option value="5d9c7b9ee2d16f00178a5c6b">Liste 1</option> 
+        <option value="5db00803655dfa001785c029">Liste 2</option>
+        <option value="5db00809655dfa001785c02a">Liste 3</option>
+        <option value="5db2c148e3d42a0017c30a9c">Liste 4</option>
+      </select>
 
-
+  </div>
+-->
 </div>
 
 
@@ -36,9 +46,9 @@
                   <option value="5db00803655dfa001785c029">Liste 2</option>
                   <option value="5db00809655dfa001785c02a">Liste 3</option>
                   <option value="5db2c148e3d42a0017c30a9c">Liste 4</option>
-                  "
                 </select>
             </div>
+            
 
             <li class="listItem"><a href="ShoppingList.html#inputfield"><img alt="icon" height="40" src=
             "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\add.png" width=
@@ -88,7 +98,7 @@
     <label>
         <input name="checkItems" type="checkbox" />
         <span class="checkbox-ghost"></span>
-        Item 1
+        <a id="Items"></a>
       </label>
 
       <label>
@@ -102,11 +112,12 @@
         <span class="checkbox-ghost"></span>
         Item 3
       </label>
+
 </form>
 
-<button id="myBtn" onclick="additem(myInput)">Button unsichtbar lol</button>
+<button id="myBtn" onclick="additem()">Button unsichtbar lol</button>
 
-<div id="Items"></div>
+
 
 
 <!-- Werbung LOL
@@ -117,6 +128,6 @@
 
 
 
-<script src="shoppingList.js"></script> <!--muss am Ende vom Skript stehen -->
+<script src="shoppingList.js"></script>
 </body>
 </html>
