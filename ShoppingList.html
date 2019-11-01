@@ -26,18 +26,15 @@
 -->
 </div>
 
-
-
-
 <div class="sidebar">  
 
     <div class="sidebar">
-        <img alt="logo" height="150" width="150" src="C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\einstellungen.png">
+        <img alt="logo" height="150" width="150" src="einstellungen.png">
 
         <ul>
 
             <li class="listItem"><a href="https://shopping-lists-api.herokuapp.com/" target="_blank"><img alt="icon" height="40" src=
-              "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\listehinzufügen.png" width=
+              "listehinzufügen.png" width=
               "40">Liste hinzufügen</a></li>
 
             <div class="select">
@@ -51,12 +48,12 @@
             
 
             <li class="listItem"><a href="ShoppingList.html#inputfield"><img alt="icon" height="40" src=
-            "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\add.png" width=
+            "add.png" width=
             "40">Item hinzufügen</a></li>
 
 
             <li class="listItem"><a href="#"><img alt="icon" height="40" src=
-            "C:\Users\strausto\OneDrive - Hewlett Packard Enterprise\Desktop\ShoppingList-master\delete.png" width=
+            "delete.png" width=
             "40">Item löschen</a></li>
 
   
@@ -95,27 +92,13 @@
     
     <label alt="Add Item" placeholder="Press Enter"></label>
 
-    <label>
-        <input name="checkItems" type="checkbox" />
-        <span class="checkbox-ghost"></span>
-        <a id="Items"></a>
-      </label>
-
-      <label>
-        <input name="checkItems" type="checkbox" />
-        <span class="checkbox-ghost"></span>
-        Item 2
-      </label>
-
-      <label>
-        <input name="checkItems" type="checkbox" />
-        <span class="checkbox-ghost"></span>
-        Item 3
-      </label>
+    <div id="item-list">
+    
+    </div>
 
 </form>
 
-<button id="myBtn" onclick="additem()">Button unsichtbar lol</button>
+<button id="myBtn" onclick="additem(this)">Button unsichtbar lol</button>
 
 
 
@@ -129,5 +112,6 @@
 
 
 <script src="shoppingList.js"></script>
+<script src="requests.js"></script>
 </body>
 </html>
