@@ -76,15 +76,16 @@ function removeItem(id) {
 
   
 //update item
-function updateItem() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("Items").innerHTML =
-        this.responseText;
+function updateItem(value) {
+  var listId = loadListId();
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var list = JSON.parse(this.responseText);
+      addItemList(list);
       }
     };
-    xhttp.open("PUT", serverUrl + "/api/v1/lists/"+id+"/items/ITEMID???", true);
+    xhttp.open("PUT", serverUrl + "/api/v1/lists/"+listId+"/items/"+id, true);
     xhttp.send();
   }
   
