@@ -52,16 +52,15 @@ function addItemList(list) {
 
 
 
-// Execute a function when the user presses a key on the keyboard
+// Execute a function when the user presses Enter on the keyboard
 input.addEventListener("keydown", function(event) {
 	// Number 13 is the "Enter" key on the keyboard
 	if (event.which == 13 || event.keyCode == 13) {
 		// Cancel the default action, if needed
 		event.preventDefault();
 		addItem(input.value);
-		// Trigger the button element with a click
-		//    document.getElementById("myBtn").click();
 	}
 });
 
-document.
+
+
