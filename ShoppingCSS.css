@@ -6,7 +6,11 @@
      margin: 0;
      overflow: hidden;
      font-family: Arial, Helvetica, sans-serif;
-     background-image: url(paperbackground.png) 
+     background-image: url(paperbackground.png);
+    
+     overflow-y: visible;
+     overflow-x: hidden;
+
 
 }
  .topnav {
@@ -69,6 +73,7 @@
      background: #333;
      padding-top: 10px;
      font-family: fantasy;
+   
 }
  @media screen and (max-width: 600px) {
      .sidebar {
@@ -198,7 +203,6 @@
      background-repeat: no-repeat;
      background-position: center;
 }
-
 
 
  @keyframes rightToLeftX {
