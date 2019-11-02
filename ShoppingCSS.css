@@ -6,11 +6,7 @@
      margin: 0;
      overflow: hidden;
      font-family: Arial, Helvetica, sans-serif;
-     background-image: url(paperbackground.png);
-    
-     overflow-y: visible;
-     overflow-x: hidden;
-
+     background-image: url(paperbackground.png) 
 
 }
  .topnav {
@@ -73,7 +69,6 @@
      background: #333;
      padding-top: 10px;
      font-family: fantasy;
-   
 }
  @media screen and (max-width: 600px) {
      .sidebar {
@@ -204,9 +199,7 @@
      background-position: center;
 }
 
-.myBtn{
-    display: none;
-}
+
 
  @keyframes rightToLeftX {
      0% {
