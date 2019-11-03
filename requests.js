@@ -1,4 +1,4 @@
-//gibt Liste zurück
+//gibt Liste zurÃ¼ck
 
 var serverUrl = "https://shopping-lists-api.herokuapp.com";
 var apiKey = "69847ae2d173f7ea582485a659a88883";
@@ -14,7 +14,6 @@ function getAllLists() {
   
         var lists = JSON.parse(this.responseText);
         showItemLists(lists);
-        // document.getElementById("Items").innerHTML = antwort._id; //.name //.items
       }
     };
     xhttp.open("GET", serverUrl + "/api/v1/lists/", true);
@@ -76,16 +75,15 @@ function removeItem(id) {
 
   
 //update item
-function updateItem(value) {
-  var listId = loadListId();
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var list = JSON.parse(this.responseText);
-      addItemList(list);
+function updateItem() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("Items").innerHTML =
+        this.responseText;
       }
     };
-    xhttp.open("PUT", serverUrl + "/api/v1/lists/"+listId+"/items/"+id, true);
+    xhttp.open("PUT", serverUrl + "/api/v1/lists/"+id+"/items/"+id , true);
     xhttp.send();
   }
   
@@ -99,4 +97,3 @@ function storeListId(id) {
   }
 
   getAllLists();
-  

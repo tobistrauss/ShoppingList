@@ -2,7 +2,7 @@ var input = document.getElementById("myInput");
 
 
 document.getElementById("listSelect").addEventListener('change', function(event) {
-  console.log(event.target.value); // Get ID of list
+  console.log(event.target.value); //// Get ID of list, if LISTSELECT changes
   getList(event.target.value);
 });
 
@@ -14,7 +14,7 @@ document.addEventListener('change', function (e) {
       if (e.target.checked) {
         e.target.parentNode.className = 'selected';
         setTimeout(function() {
-          removeItem(e.target.id);
+          removeItem(e.target.id);        //löscht Item wenn angekreuzt nach 3 sek
         }, 3000);
       } else {
         e.target.parentNode.className = '';
@@ -22,17 +22,17 @@ document.addEventListener('change', function (e) {
     }
 });
 
-function showItemLists(lists) {
-  // 
-  var id = loadListId();
+function showItemLists(lists) {  //gibt ausgewählte Liste aus
+ 
+  var id = loadListId();   // aktuelle Listen ID
   var select = document.getElementById("listSelect");
-  var html = '';
-  lists.forEach(list => {
-    if (!id) {
+  var html = '';          //String
+  lists.forEach(list => {  //speichert ID auch bei Refresh
+    if (!id) {              // + Liste 1 laden
       id = list._id;
       storeListId(id);
     }
-    var selected = id === list._id ? true : false;
+    var selected = id === list._id ? true : false;    //...und fügt Listenitems hinzu
     if (selected) {
       addItemList(list);
     }
@@ -50,21 +50,13 @@ function addItemList(list) {
   div.innerHTML = html;
 }
 
-// Get the input field
-var input = document.getElementById("myInput");
 
-// Execute a function when the user presses a key on the keyboard
+// Execute a function when the user presses Enter on the keyboard
 input.addEventListener("keydown", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.which == 13 || event.keyCode == 13) {
     // Cancel the default action, if needed
     event.preventDefault();
     addItem(input.value);
-    // Trigger the button element with a click
-//    document.getElementById("myBtn").click();
   }
 });
-
-
-
-
