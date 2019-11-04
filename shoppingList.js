@@ -67,9 +67,8 @@ input.addEventListener("keydown", function(event) {
 
 var deleteBtn = document.getElementById("deleteIcon");
 
-deleteBtn.onclick = function (id) {
-  deleteList(id);                 //hier?
-	console.log(selectedList + " geloescht");
+deleteBtn.onclick = function () {
+  deleteList(selectedList);                 //hier?
 }
 
 // Deine Modal Funktionen
@@ -81,6 +80,7 @@ var span = document.getElementsByClassName("close")[0];
 
 addBtn.onclick = function() {
 	var newListName = document.getElementById("newList").value;
+	addList(newListName)
 	var listJson = {"name": newListName};
 	console.log(listJson);
 }
@@ -98,3 +98,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+

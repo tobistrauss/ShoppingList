@@ -1,4 +1,4 @@
-//gibt Liste zurÃ¼ck
+//gibt Liste zurÃƒÂ¼ck
 
 var serverUrl = "https://shopping-lists-api.herokuapp.com";
 var apiKey = "69847ae2d173f7ea582485a659a88883";
@@ -109,6 +109,7 @@ function addList(value) {
   
 //delete List
 function deleteList(id) {
+console.log(selectedList + " geloescht");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -131,4 +132,5 @@ function storeListId(id) {
     return localStorage.getItem('ListId');
   }
 
+  getAllLists();
   getAllLists();
