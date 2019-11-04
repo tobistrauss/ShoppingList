@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Sacramento');
+﻿@import url('https://fonts.googleapis.com/css?family=Sacramento');
  html{
     font-family: 'Sacramento', cursive;
 }
@@ -99,7 +99,7 @@
      margin-left: auto;
      vertical-align: middle;
      margin-top: -2px;
-     margin-right: 20px;
+     margin-right: 10px;
 }
  .sidebar ul {
      line-height: 40px;
@@ -108,33 +108,33 @@
      padding-left: 0;
 }
  .listItem {
-     height: 40px;
-     width: 240px;
-     transition: .4s;
-    /* Geschwindigk. für Animation */
-     position: relative;
-     left: -40px;
+    height: 40px;
+	width: 240px;
+	transition: .4s;
+	/* Geschwindigk. für Animation */
+	position: relative;
+	left: -40px;
+	color: white;
+	cursor: pointer;
 }
  .listItem:hover {
      left: 0;
 }
  select {
-     width: 100%;
-     height: 40px;
-     padding-left: 10px;
-     background: repeat;
-     color: #fff;
-     font-family: fantasy;
-     font-size: 16px;
-     box-shadow: 2px 2px 5px 1px rgba(204, 192, 192, 0.3);
-     border-radius: 3px;
-     outline: none;
-     cursor: pointer;
-     -moz-appearance: none;
-     -webkit-appearance: none;
-     appearance: none;
-     border: none;
-     overflow: hidden;
+    height: 40px;
+	background: repeat;
+	color: #fff;
+	font-family: fantasy;
+	font-size: 16px;
+	box-shadow: 2px 2px 5px 1px rgba(204, 192, 192, 0.3);
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	overflow: hidden;
 }
  select::-ms-expand {
      display: none;
@@ -509,4 +509,42 @@ flex-shrink: 0;
 }
 @media only screen and (max-width: 999px){
     input[type="text"] {left:0px;top:130px;}
+}
+
+/*Modal*/
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 300px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

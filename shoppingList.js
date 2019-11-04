@@ -1,7 +1,8 @@
 var input = document.getElementById("myInput");
-
+var selectedList;
 
 document.getElementById("listSelect").addEventListener('change', function(event) {
+  selectedList = event.target.value;
   console.log(event.target.value); //// Get ID of list, if LISTSELECT changes
   getList(event.target.value);
 });
@@ -36,7 +37,7 @@ function showItemLists(lists) {  //gibt ausgewählte Liste aus
     if (selected) {
       addItemList(list);
     }
-    html += '<option selected="'+selected+'" value="'+list._id+'">'+list.name+'</option> ';
+    html += '<option selected="'+selected+'" value="'+list._id+'">'+list.name+'</option>';
   });
   select.innerHTML = html;
 }
@@ -60,3 +61,39 @@ input.addEventListener("keydown", function(event) {
     addItem(input.value);
   }
 });
+
+
+// Deine Liste Löschen
+
+var deleteBtn = document.getElementById("deleteIcon");
+
+deleteBtn.onclick = function () {
+	console.log(selectedList + " geloescht");
+}
+
+// Deine Modal Funktionen
+
+var addBtn = document.getElementById("addListButton");
+var modal = document.getElementById("listAddModal");
+var btn = document.getElementById("addList");
+var span = document.getElementsByClassName("close")[0];
+
+addBtn.onclick = function() {
+	var newListName = document.getElementById("newList").value;
+	var listJson = {"name": newListName};
+	console.log(listJson);
+}
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

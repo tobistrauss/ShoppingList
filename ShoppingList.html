@@ -31,28 +31,21 @@
         <img alt="logo" height="150" width="150" src="einstellungen.png">
 
         <ul>
-
-            <li class="listItem"><a href="https://shopping-lists-api.herokuapp.com/" target="_blank"><img alt="icon" height="40" src=
-              "listehinzufügen.png" width=
+			  <li class="listItem">
+				<div class="select">
+					<img id="deleteIcon" alt="icon" height="40" src="delete.png" width="40">
+					<select id="listSelect"></select>
+				</div>
+				
+			</li>
+			
+            <!-- <a href="https://shopping-lists-api.herokuapp.com/" target="_blank"> -->
+            <li id="addList" class="listItem"><a></a><img alt="icon" height="40" src=
+              "add.png" width=
               "40">Liste hinzufügen</a></li>
-
-            <div class="select">
-                <select id="listSelect"> 
-
-                </select>
-            </div>
             
 
-            <li class="listItem"><a href="ShoppingList.html#inputfield"><img alt="icon" height="40" src=
-            "add.png" width=
-            "40">Item hinzufügen</a></li>
 
-
-            <li class="listItem"><a href="#"><img alt="icon" height="40" src=
-            "delete.png" width=
-            "40">Item löschen</a></li>
-
-  
         </ul>
         <article>
             <a href="https://facebook.com/pascal.wegner.success" target="_blank">
@@ -96,6 +89,15 @@
 
 
 
+<!-- Modal -->
+<div id="listAddModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<h3>Welche Liste wollen Sie hinzuf&uumlgen?</h3>
+    <input id="newList" ></input> <button id="addListButton">Add</Button>
+  </div>
+</div>
+<!-- Ende deines Modals -->
 
 
 
