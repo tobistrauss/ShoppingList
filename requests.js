@@ -1,12 +1,9 @@
-//gibt Liste zurÃƒÂ¼ck
-
+//
 var serverUrl = "https://shopping-lists-api.herokuapp.com";
 var apiKey = "69847ae2d173f7ea582485a659a88883";
-
-/*
-GET /api/v1/lists
-Authorization: <API Key>
-*/
+//
+//
+//
 function getAllLists() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -20,8 +17,9 @@ function getAllLists() {
     xhttp.setRequestHeader('Authorization', apiKey);
     xhttp.send();
 }
-
-
+//
+//
+//
 function getList(id) {
     storeListId(id);
     var xhttp = new XMLHttpRequest();
@@ -36,14 +34,9 @@ function getList(id) {
     xhttp.open("GET", serverUrl + "/api/v1/lists/" + id, true);
     xhttp.send();
 }
- 
-//add
-/*
-POST /api/v1/lists/<listid>/items
-Content-Type: application/json
-
-{ "name": "" }
-*/
+//
+//
+//
 function addItem(value) {
     var id = loadListId();
     var xhttp = new XMLHttpRequest();
@@ -58,8 +51,9 @@ function addItem(value) {
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify(jsonObject));
   }
-  
-//remove item
+// 
+//
+//
 function removeItem(id) {
     var listId = loadListId();
     var xhttp = new XMLHttpRequest();
@@ -88,10 +82,9 @@ function updateItem() {
     xhttp.send();
   }
 */
-//addList
-
- 
-//add List
+//
+//
+//
 function addList(value) {
   var xhttp = new XMLHttpRequest();
   var jsonObject= {"name" : value };
@@ -105,9 +98,9 @@ function addList(value) {
   xhttp.setRequestHeader('Authorization', apiKey);
   xhttp.send(JSON.stringify(jsonObject));
 }
-
-  
-//delete List
+//
+//  
+//
 function deleteList(id) {
 console.log(selectedList + " geloescht");
   var xhttp = new XMLHttpRequest();
@@ -122,15 +115,18 @@ console.log(selectedList + " geloescht");
   xhttp.setRequestHeader('Authorization', apiKey);
   xhttp.send();
 }
-  
+//
+// 
 //store ID
 function storeListId(id) {
     localStorage.setItem('ListId', id);
   }
-  
+//
   function loadListId() {
     return localStorage.getItem('ListId');
   }
+
+
 
   getAllLists();
   getAllLists();
