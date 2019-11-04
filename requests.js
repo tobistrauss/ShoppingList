@@ -98,7 +98,6 @@ function addList(value) {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var list = JSON.parse(this.responseText);
-      addItemList(list);
     }
   };
   xhttp.open("POST", serverUrl + "/api/v1/lists/", true);
