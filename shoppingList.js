@@ -67,7 +67,8 @@ input.addEventListener("keydown", function(event) {
 
 var deleteBtn = document.getElementById("deleteIcon");
 
-deleteBtn.onclick = function () {
+deleteBtn.onclick = function (id) {
+  deleteList(id);                 //hier?
 	console.log(selectedList + " geloescht");
 }
 

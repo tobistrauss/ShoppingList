@@ -75,6 +75,7 @@ function removeItem(id) {
 
   
 //update item
+/*
 function updateItem() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -86,8 +87,43 @@ function updateItem() {
     xhttp.open("PUT", serverUrl + "/api/v1/lists/"+id+"/items/"+id , true);
     xhttp.send();
   }
+*/
+//addList
+
+ 
+//add List
+function addList(value) {
+  var xhttp = new XMLHttpRequest();
+  var jsonObject= {"name" : value };
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var list = JSON.parse(this.responseText);
+      addItemList(list);
+    }
+  };
+  xhttp.open("POST", serverUrl + "/api/v1/lists/", true);
+  xhttp.setRequestHeader('Content-type', 'application/json');
+  xhttp.setRequestHeader('Authorization', apiKey);
+  xhttp.send(JSON.stringify(jsonObject));
+}
+
   
+//delete List
+function deleteList(id) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      var lists = JSON.parse(this.responseText);
+      showItemLists(lists);
+    }
+  };
+  xhttp.open("DELETE", serverUrl + "/api/v1/lists/"+id, true);
+  xhttp.setRequestHeader('Authorization', apiKey);
+  xhttp.send();
+}
   
+//store ID
 function storeListId(id) {
     localStorage.setItem('ListId', id);
   }
