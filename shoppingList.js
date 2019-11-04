@@ -73,7 +73,7 @@ var deleteBtn = document.getElementById("deleteIcon");
 
 deleteBtn.onclick = function () {
   deleteList(selectedList);   
- // window.location.reload();      <-- evtl. um Seite danach neu zu laden       
+ //window.location.reload();     // <-- evtl. um Seite danach neu zu laden       
 }
 //
 // 
@@ -88,7 +88,7 @@ addBtn.onclick = function() {
 	addList(newListName)
 	var listJson = {"name": newListName};   //neue Liste anlegen
   console.log(listJson);
-  // window.location.reload();      <-- evtl. um Seite danach neu zu laden 
+  //window.location.reload();      //<-- evtl. um Seite danach neu zu laden 
 }
 //
 btn.onclick = function() {
