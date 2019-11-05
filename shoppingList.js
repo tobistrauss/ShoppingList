@@ -4,15 +4,17 @@ var selectedList;
 //
 //
 //
-document.getElementById("listSelect").addEventListener('change', function(event) {
-  selectedList = event.target.value;
-  console.log(event.target.value);      //Set ID of list, if LISTSELECT changes
+document.getElementById("listSelect").addEventListener('change', function(event) { //gibt ausgewählte Liste bei Änderung aus
+  selectedList = event.target.value;          //setzt ID 
+  console.log(event.target.value);      
   getList(event.target.value);          //gibt  ausgewählte Liste aus
 });
 //
+//
+//
 document.getElementById("listSelect").addEventListener('mouseover', function(event) {
-selectedList = event.target.value;
-getList(event.target.value);
+selectedList = event.target.value;    //Mouseover, damit Liste direkt aktualisiert (für Add + Delete-List-Funktion )
+getList(event.target.value);          //...und entsprechend angezeigt wird
 });
 //
 //
@@ -37,7 +39,7 @@ function showItemLists(lists) {  //gibt ausgewählte Liste aus
  
   var id = loadListId();     // aktuelle Listen ID
   var select = document.getElementById("listSelect");
-  var html = '';    //String
+  var html = '';      //String
   lists.forEach(list => {  //speichert ID von aktueller Liste
     if (!id) {             
       id = list._id;
@@ -47,8 +49,8 @@ function showItemLists(lists) {  //gibt ausgewählte Liste aus
     if (selected) {
       addItemList(list);
     }
-    html += '<option selected="'+selected+'" value="'+list._id+'">'+list.name+'</option>';  //...und gibt Listenname in DD-Menü aus
-  });
+    html += '<option selected="'+selected+'" value="'+list._id+'">'+list.name+'</option>';  
+  });   //...und fügt Listennamen in DD-Menü hinzu
   select.innerHTML = html;
 }
 //
@@ -65,10 +67,10 @@ function addItemList(list) {        //Fügt Item zu Liste hinzu
 //
 //
 //
-input.addEventListener("keydown", function(event) {
-  if (event.which == 13 || event.keyCode == 13) {       // Number 13 is the "Enter" key on the keyboard
+input.addEventListener("keydown", function(event) {   //Die Nummer 13 ist Schlüssel für "Enter" auf Tastatur    
+  if (event.which == 13 || event.keyCode == 13) {     // 2 Varianten wg Browserkompatibilität
     event.preventDefault();
-    addItem(input.value);     // & führt AddItem Funktion aus
+    addItem(input.value);     // & führt Add-Item Funktion aus
   }
 });
 //
@@ -78,22 +80,20 @@ var deleteBtn = document.getElementById("deleteIcon");
 
 deleteBtn.onclick = function () {
   deleteList(selectedList);   
- //window.location.reload();     // <-- evtl. um Seite danach neu zu laden       
 }
 //
 // 
-// Modal Funktionen
+// Popup Funktionen
 var addBtn = document.getElementById("addListButton");
 var modal = document.getElementById("listAddModal");
 var btn = document.getElementById("addList");
 var span = document.getElementsByClassName("close")[0];
 //
-addBtn.onclick = function() { 
+addBtn.onclick = function() {         //neue Liste (im JSON-Format) anlegen
 	var newListName = document.getElementById("newList").value;
-	addList(newListName)
-	var listJson = {"name": newListName};   //neue Liste anlegen
-  console.log(listJson);
-  //window.location.reload();      //<-- evtl. um Seite danach neu zu laden 
+	addList(newListName);
+	var listJson = {"name": newListName};   //neue Liste (im JSON-Format) anlegen
+  console.log(listJson);                  // + Name in Console ausgeben --> zur Übersicht
 }
 //
 btn.onclick = function() {

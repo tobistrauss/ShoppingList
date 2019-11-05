@@ -4,7 +4,7 @@ var apiKey = "69847ae2d173f7ea582485a659a88883";
 //
 //
 //
-function getAllLists() {
+function getAllLists() {    //gibt Namen aller Listen zurück
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -20,7 +20,7 @@ function getAllLists() {
 //
 //
 //
-function getList(id) {
+function getList(id) { //gibt ausgewählte Item-Liste aus
     storeListId(id);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -28,7 +28,6 @@ function getList(id) {
   
         var list = JSON.parse(this.responseText);
         addItemList(list);
-        // document.getElementById("Items").innerHTML = antwort._id; //.name //.items
       }
     };
     xhttp.open("GET", serverUrl + "/api/v1/lists/" + id, true);
@@ -85,14 +84,14 @@ function updateItem() {
 //
 //
 //
-function addList(value) {
+function addList(value) {       //legt neue Liste an
   var xhttp = new XMLHttpRequest();
   var jsonObject= {"name" : value };
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var list = JSON.parse(this.responseText);
       getList(list._id);
-      getAllLists();
+      getAllLists();          //lässt direkt neues DD-Menü anzeigen
     }
   };
   xhttp.open("POST", serverUrl + "/api/v1/lists/", true);
@@ -108,7 +107,7 @@ function deleteList(id) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      getAllLists();
+      getAllLists();        //lässt direkt neues DD-Menü anzeigen
     }
   };
   xhttp.open("DELETE", serverUrl + "/api/v1/lists/"+id, true);
@@ -117,11 +116,11 @@ function deleteList(id) {
 }
 //
 // 
-//store ID
-function storeListId(id) {
+//set ID
+function storeListId(id) {          //speichert ID im Programm
     localStorage.setItem('ListId', id);
   }
-//
+//get ID
   function loadListId() {
     return localStorage.getItem('ListId');
   }

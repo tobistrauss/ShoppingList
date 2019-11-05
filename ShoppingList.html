@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="ShoppingCSS.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -12,16 +13,8 @@
     <div class="topnav" id="myTopnav">
 
         <a href="https://de.wikipedia.org/wiki/Einkaufszettel">Shopping List</a>
-
-        <div class="selectMobile">
-
-            <select id="listSelectMobile">
-                <p>Choose List:</p>
-                <option value="meineListen">My Lists</option>
-
-            </select>
-
-        </div>
+        
+      
 
     </div>
 
@@ -33,6 +26,7 @@
             <ul>
                 <li class="listItem">
                     <div class="select">
+                    
                         <img id="deleteIcon" alt="icon" height="40" src="delete.png" width="40">
                         <select id="listSelect"></select>
                     </div>
