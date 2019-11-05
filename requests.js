@@ -91,6 +91,8 @@ function addList(value) {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var list = JSON.parse(this.responseText);
+      getList(list._id);
+      getAllLists();
     }
   };
   xhttp.open("POST", serverUrl + "/api/v1/lists/", true);
@@ -102,13 +104,11 @@ function addList(value) {
 //  
 //
 function deleteList(id) {
-console.log(selectedList + " geloescht");
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-
-      var lists = JSON.parse(this.responseText);
-      showItemLists(lists);
+      getAllLists();
     }
   };
   xhttp.open("DELETE", serverUrl + "/api/v1/lists/"+id, true);
@@ -125,8 +125,7 @@ function storeListId(id) {
   function loadListId() {
     return localStorage.getItem('ListId');
   }
-
-
-
-  getAllLists();
+//
+//
+//
   getAllLists();

@@ -10,6 +10,11 @@ document.getElementById("listSelect").addEventListener('change', function(event)
   getList(event.target.value);          //gibt  ausgewählte Liste aus
 });
 //
+document.getElementById("listSelect").addEventListener('mouseover', function(event) {
+selectedList = event.target.value;
+getList(event.target.value);
+});
+//
 //
 //Checkbox
 document.addEventListener('change', function (e) {
